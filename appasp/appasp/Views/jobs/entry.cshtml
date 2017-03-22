@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Job Detail";
+}
+
+<div class="container-fluid text-center bod">
+    <h1>Job Details</h1>
+    <hr />
+    <div class="row content">
+        <div class="col-sm-2 sidenav">        </div>
+
+
+        <div class="col-md-8 text-left">
+           <div class="row">
+               <div class="col-sm-12">
+                   <h2 class="text-info">Job: @ViewBag.jobEntry.JobName</h2><h6 class="text-muted">Creation Date:@ViewBag.jobEntry.CreationTime</h6><hr />
+               </div>
+           </div>
+            <div>
+                <div class="text-info">
+                    Description:
+                </div>
+                <p>
+                    @ViewBag.jobEntry.Description
+                </p>
+            </div>
+            <hr />
+            <div class="row">
+                <h2 class="text-center text-primary">Before</h2>
+                
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="@Url.Content(ViewBag.jobEntry.PathImageAfter)" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                </div>
+                <div class="col-sm-8">
+
+                </div>
+            </div>
+            <hr />
+            <div class="row">
+                <h2 class="text-center text-primary">After</h2>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+
+                </div>
+                <div class="col-sm-4">
+                    <img src="@Url.Content(ViewBag.jobEntry.PathImageAfter)" class="pull-left img-responsive thumb margin10 img-thumbnail">
+                </div>
+            </div>
+            <hr />
+        </div>
+
+
+        <div class="col-sm-2 sidenav">        </div>
+    </div>
+</div>
+
+

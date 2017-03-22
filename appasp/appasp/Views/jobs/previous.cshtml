@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Previous";
+}
+
+<div class="container-fluid text-center bod">
+    <h1>Jobs</h1>
+    <hr />
+    <div class="row content">
+        <div class="col-sm-2 sidenav">
+
+        </div>
+
+
+        <div class="col-md-8 text-left">
+            
+            @foreach (var job in ViewBag.Jobs)
+            {
+                <div>
+                    <div class="row">
+                        <h3>@job.JobName</h3>
+                        
+                    </div>
+                    <div class="row">
+                        <hr />
+                        <div class="col-sm-2">
+                            <img src="@Url.Content(job.PathImageAfter)" class="pull-left img-responsive thumb margin10 img-thumbnail" width="150" height="100">
+                        </div>
+                        <div class="col-sm-9">
+                            <p >
+                                @job.Description
+                            </p>
+                        </div>
+                        <div class="btn btn-info col-md-offset-10">
+                            @Html.ActionLink("Details", "entry", "jobs", new { IdJob = job.Id },null)
+                        </div>
+                    </div>
+                </div><br />
+            }
+
+        </div>
+        <div class="col-sm-2 sidenav">
+
+        </div>
+    </div>
+</div>

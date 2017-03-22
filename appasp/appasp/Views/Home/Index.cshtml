@@ -1,0 +1,119 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<style>
+    .item {
+        background: #376c83;
+        text-align: center;
+        height: 350px !important;
+    }
+
+    h2 {
+        margin: 0;
+        color: #888;
+        padding-top: 100px;
+        font-size: 50px;
+    }
+</style>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#DemoCarousel").carousel();
+
+        //Carousel Controls
+        $(".left").click(function () {
+            $("#DemoCarousel").carousel('prev');
+        });
+        $(".right").click(function () {
+            $("#DemoCarousel").carousel('next');
+        });
+
+        //Carousel Indicators
+        $(".slide-1").click(function () {
+            $("#DemoCarousel").carousel(0);
+        });
+        $(".slide-2").click(function () {
+            $("#DemoCarousel").carousel(1);
+        });
+        $(".slide-3").click(function () {
+            $("#DemoCarousel").carousel(2);
+        });
+    });
+</script>
+
+
+
+<div class="row bod">
+    <div class="col-sm-2 sidenav">
+
+    </div>
+
+
+    <div class="col-sm-8 text-left">
+        <div id="DemoCarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#DemoCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#DemoCarousel" data-slide-to="1"></li>
+                <li data-target="#DemoCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <h2>Restorer</h2>
+                    <div class="carousel-caption">
+                        <h3>This is the First Label</h3>
+                        <hr />
+                        <p>The Content of the First Slide goes in here</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2>The Best Restorers</h2>
+                    <div class="carousel-caption">
+                        <h3>This is the Second Label</h3>
+                        <p>The Content of the second Slide goes in here</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <h2>Contac us</h2>
+                    <div class="carousel-caption">
+                        <h3>This is the Third Label</h3>
+                        <p>The Content of the Third Slide goes in here</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <a class="carousel-control left" href="#DemoCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="carousel-control right" href="#DemoCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+
+        <div class="col-md-4">
+            <h2>Restorers</h2>
+            <p>
+                For more than 30 years we have undertaken commissions from clients covering all aspects of fine arts, furniture conservation and restoration.
+            </p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Trust</h2>
+            <p>We are proud that our knowledge, expertise and craftsmanship continue to inspire confidence in our clients, who return to us time and time again, and who refer their colleagues and friends to us.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Totally discretion</h2>
+            <p>You may be assured of complete discretion when you contact us with your enquiry.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>
+
+
+    <div class="col-sm-2 sidenav">
+
+    </div>
+</div>
